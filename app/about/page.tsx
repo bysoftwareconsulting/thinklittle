@@ -1,10 +1,20 @@
 export default function About() {
   return (
     <main>
-      <section className="relative py-4 px-12 sm:px-24 h-64 md:h-80 bg-[url('/Owen.png')] bg-cover bg-center flex items-end">
-        <div className="w-full md:w-2/5 flex flex-col justify-end bg-gradient-to-r from-black to-transparent p-4 rounded-l-2xl">
-          <div className="text-2xl font-semibold text-white">Michael Bacon, Matt Bacon-Brenes, Samuel Bacon-Brenes</div>
-          <div className="text-xl font-semibold text-white">Partners</div>
+      <section className="relative py-4 px-12 sm:px-24 h-64 md:h-108 bg-[url('/About.png')] bg-cover bg-[center_20%] flex items-end">
+        <div className="w-full md:w-2/5 h-16 sm:h-20 md:h-28 flex flex-col justify-end 
+bg-gradient-to-r from-black to-transparent 
+p-2 sm:p-3 md:p-4 
+rounded-l-lg sm:rounded-l-xl md:rounded-l-2xl">
+
+          <div className="text-sm sm:text-lg md:text-2xl font-semibold text-white">
+            Michael Bacon, Matt Bacon-Brenes, Samuel Bacon-Brenes
+          </div>
+
+          <div className="text-xs sm:text-base md:text-xl font-semibold text-white">
+            Partners
+          </div>
+
         </div>
       </section>
       <section className="max-w-7xl mx-auto  py-4 px-12 sm:px-24">
