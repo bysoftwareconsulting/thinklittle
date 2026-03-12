@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav/nav";
 import Footer from "@/components/Footer/footer"
+import { Roboto_Slab, Roboto } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const robotoSlab = Roboto_Slab({
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const roboto = Roboto({ 
+  variable: "--font-roboto", 
+  subsets: ["latin"], 
+  weight: ["400", "700"] });
+
 
 export const metadata: Metadata = {
-  title: "by software consulting",
-  description: "by software consulting public facing website",
+  title: "Think Little PDX",
+  description: "Think Little PDX public facing website",
 };
 
 export default function RootLayout({
@@ -26,12 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <header> <Nav /></header>
-        <div className="p-12">
-          {children}
-        </div>
-        <footer><Footer /></footer>
+      <body className={`${robotoSlab.className} ${roboto.variable} antialiased`}>
+          <header> <Nav /></header>
+          <div>
+            {children}
+          </div>
+          <footer><Footer /></footer>
       </body>
     </html>
   );

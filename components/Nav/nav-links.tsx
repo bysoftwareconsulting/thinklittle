@@ -7,23 +7,24 @@ type NavLinksProps = {
 export default function NavLinks({ onNavigate }: NavLinksProps) {
   const links = [
     { text: "Home", path: "/" },
+    { text: "Reviews", path: "/reviews" },
     { text: "About", path: "/about" },
-    { text: "Services", path: "/services" },
-    { text: "Contact", path: "/contact" },
   ];
 
   return (
     <>
-      {links.map((link) => (
-        <Link
-          key={link.path}
-          href={link.path}
-          onClick={onNavigate}
-          className="text-gray-700 hover:bg-gray-100 hover:text-black px-4 py-3 rounded-lg text-sm font-medium"
-        >
-          {link.text}
-        </Link>
-      ))}
+      {links.map((link) => {
+        return (
+            <Link
+            key={link.path}
+            href={link.path}
+            onClick={onNavigate}
+            className="text-white-700 border-b-2 border-transparent hover:border-white hover:scale-110 px-4 py-3 text-base font-medium transition duration-500"
+            >
+            {link.text}
+            </Link>
+        );
+      })}
     </>
   );
 }

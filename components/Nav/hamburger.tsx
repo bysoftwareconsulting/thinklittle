@@ -17,19 +17,19 @@ export default function Hamburger() {
       >
         <span
           className={[
-            "absolute h-[2px] w-7 bg-black rounded-full transition-all duration-300",
+            "absolute h-[2px] w-7 bg-white rounded-full transition-all duration-300",
             open ? "rotate-45 translate-y-0" : "-translate-y-2.5",
           ].join(" ")}
         />
         <span
           className={[
-            "absolute h-[2px] w-7 bg-black rounded-full transition-all duration-300",
+            "absolute h-[2px] w-7 bg-white rounded-full transition-all duration-300",
             open ? "opacity-0" : "opacity-100",
           ].join(" ")}
         />
         <span
           className={[
-            "absolute h-[2px] w-7 bg-black rounded-full transition-all duration-300",
+            "absolute h-[2px] w-7 bg-white rounded-full transition-all duration-300",
             open ? "-rotate-45 translate-y-0" : "translate-y-2.5",
           ].join(" ")}
         />
@@ -46,7 +46,7 @@ export default function Hamburger() {
 
       <div
         className={[
-          "absolute right-0 mt-2 w-56 rounded-xl bg-white shadow-lg ring-1 ring-black/5 z-50",
+          "absolute right-0 mt-2 w-56 rounded-xl bg-[#525e3f] shadow-lg ring-1 ring-black/5 z-50",
           open ? "block" : "hidden",
         ].join(" ")}
       >

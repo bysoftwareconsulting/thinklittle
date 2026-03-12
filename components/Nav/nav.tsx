@@ -5,23 +5,22 @@ import Hamburger from "@/components/Nav/hamburger";
 export default function Nav() {
   return (
     <nav className="shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20 min-w-0">
+          <div className="shrink-0">
             <Logo />
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex space-x-4">
-              <NavLinks />
+
+            <div className="hidden md:flex ml-10 space-x-4 items-center justify-end flex-1">
+            <NavLinks />
             </div>
-          </div>
-          <div className="block md:hidden">
-            <div className="flex space-x-4">
-              <Hamburger />
-            </div>
+
+          <div className="md:hidden shrink-0">
+            <Hamburger />
           </div>
         </div>
       </div>
     </nav>
   );
-};
+}
+
