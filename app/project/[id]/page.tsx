@@ -2,6 +2,12 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projectData } from "@/lib/data/projectData";
 
+export async function generateStaticParams() {
+  return projectData.map((project) => ({
+    id: String(project.id),
+  }));
+}
+
 type Props = {
   params: Promise<{
     id: string;
@@ -11,7 +17,7 @@ type Props = {
 export default async function ProjectPage({ params }: Props) {
   const { id } = await params;
 
-  const project = projectData.find((item) => item.id === Number(id));
+  const project = projectData.find((item) => String(item.id) === id);
 
   if (!project) {
     notFound();
